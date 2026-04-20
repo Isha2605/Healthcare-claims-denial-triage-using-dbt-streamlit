@@ -1,7 +1,16 @@
+from pathlib import Path
 import duckdb
-import pandas as pd
 
-con = duckdb.connect(r"C:\Users\Owner\Desktop\Isha Healthcare project\warehouse\healthcare.duckdb")
+# Project root = folder where this script lives
+project_root = Path(__file__).resolve().parent
+
+# DuckDB database path
+db_path = project_root / "warehouse" / "healthcare.duckdb"
+
+print("Using DB:", db_path)
+
+# Connect to DuckDB
+con = duckdb.connect(str(db_path))
 
 tables = [
     "claims",
@@ -15,15 +24,10 @@ tables = [
     "conditions",
 ]
 
-all_rows = []
-
 for table in tables:
-    df = con.execute(f"DESCRIBE {table}").df()
-    df["table_name"] = table
-    all_rows.append(df)
-
-final_df = pd.concat(all_rows, ignore_index=True)
-final_df.to_csv("table_schema_summary.csv", index=False)
+    print(f"\n===== {table.upper()} =====")
+    result = con.execute(f"DESCRIBE {table}").fetchall()
+    for row in result:
+        print(row)
 
 con.close()
-print("Saved schema to table_schema_summary.csv")

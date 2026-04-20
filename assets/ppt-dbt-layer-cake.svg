@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 492" width="520" height="492" role="img" aria-label="dbt layer cake: sources through marts to Streamlit">
+  <defs>
+    <linearGradient id="layerFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#f0faf8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7ad4c8"/>
+      <stop offset="100%" style="stop-color:#2a8f82"/>
+    </linearGradient>
+    <filter id="sh" x="-6%" y="-6%" width="112%" height="112%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#0a2f36" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 9 3, 0 6" fill="#40616b"/>
+    </marker>
+  </defs>
+
+  <text x="260" y="28" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#40616b" letter-spacing="0.06em">DBT LAYER CAKE</text>
+
+  <!-- Layer 1: Sources (bottom of stack = foundation) -->
+  <g filter="url(#sh)">
+    <rect x="60" y="48" width="400" height="76" rx="12" fill="url(#layerFill)" stroke="#184b54" stroke-opacity="0.16" stroke-width="1.5"/>
+    <rect x="60" y="48" width="5" height="76" rx="12 0 0 12" fill="url(#accent)"/>
+  </g>
+  <text x="268" y="78" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#20384a">1. Sources</text>
+  <text x="268" y="100" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#4a6573">DuckDB tables registered in dbt (YAML)</text>
+
+  <line x1="260" y1="124" x2="260" y2="142" stroke="#40616b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Layer 2: Staging -->
+  <g filter="url(#sh)">
+    <rect x="60" y="142" width="400" height="76" rx="12" fill="url(#layerFill)" stroke="#184b54" stroke-opacity="0.16" stroke-width="1.5"/>
+    <rect x="60" y="142" width="5" height="76" rx="12 0 0 12" fill="url(#accent)"/>
+  </g>
+  <text x="268" y="172" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#20384a">2. Staging</text>
+  <text x="268" y="194" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11.5" fill="#4a6573">stg_* : clean names, types, core fields, tests</text>
+
+  <line x1="260" y1="218" x2="260" y2="236" stroke="#40616b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Layer 3: Intermediate -->
+  <g filter="url(#sh)">
+    <rect x="60" y="236" width="400" height="86" rx="12" fill="url(#layerFill)" stroke="#184b54" stroke-opacity="0.16" stroke-width="1.5"/>
+    <rect x="60" y="236" width="5" height="86" rx="12 0 0 12" fill="url(#accent)"/>
+  </g>
+  <text x="268" y="264" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#20384a">3. Intermediate</text>
+  <text x="268" y="284" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#4a6573">int_claim_financials (txn rollups)</text>
+  <text x="268" y="300" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#4a6573">int_claim_enriched (claim + context + signals)</text>
+
+  <line x1="260" y1="322" x2="260" y2="340" stroke="#40616b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Layer 4: Marts -->
+  <g filter="url(#sh)">
+    <rect x="60" y="340" width="400" height="76" rx="12" fill="url(#layerFill)" stroke="#184b54" stroke-opacity="0.16" stroke-width="1.5"/>
+    <rect x="60" y="340" width="5" height="76" rx="12 0 0 12" fill="url(#accent)"/>
+  </g>
+  <text x="268" y="370" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#20384a">4. Marts</text>
+  <text x="268" y="392" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#4a6573">mart_claim_priority_queue, mart_claims_overview</text>
+
+  <line x1="260" y1="416" x2="260" y2="428" stroke="#40616b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Streamlit receiver -->
+  <rect x="100" y="432" width="320" height="50" rx="10" fill="#184b54"/>
+  <text x="260" y="454" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Streamlit</text>
+  <text x="260" y="472" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="10.5" font-weight="600" fill="rgba(255,255,255,0.9)">reads marts + enriched outputs</text>
+</svg>

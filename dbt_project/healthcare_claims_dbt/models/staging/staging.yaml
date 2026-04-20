@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: stg_claims
+    columns:
+      - name: claim_id
+        tests:
+          - not_null
+
+  - name: stg_claims_transactions
+    columns:
+      - name: claim_transaction_id
+        tests:
+          - not_null
+      - name: claim_id
+        tests:
+          - not_null
+
+  - name: stg_encounters
+    columns:
+      - name: encounter_id
+        tests:
+          - not_null
+
+  - name: stg_patients
+    columns:
+      - name: patient_id
+        tests:
+          - not_null
+
+  - name: stg_payers
+    columns:
+      - name: payer_id
+        tests:
+          - not_null
+
+  - name: stg_providers
+    columns:
+      - name: provider_id
+        tests:
+          - not_null
+
+  - name: stg_organizations
+    columns:
+      - name: organization_id
+        tests:
+          - not_null
+
+  - name: stg_procedures
+    columns:
+      - name: patient_id
+        tests:
+          - not_null
+
+  - name: stg_conditions
+    columns:
+      - name: patient_id
+        tests:
+          - not_null

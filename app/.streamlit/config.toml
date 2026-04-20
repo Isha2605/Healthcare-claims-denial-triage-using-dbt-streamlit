@@ -1,0 +1,9 @@
+# Used when you run: cd app && streamlit run app.py
+# Keeps data frames + widgets on a light clinical theme (esp. if OS is in dark mode).
+
+[theme]
+base = "light"
+primaryColor = "#2a8f82"
+backgroundColor = "#c5d8d0"
+secondaryBackgroundColor = "#ffffff"
+textColor = "#20384a"

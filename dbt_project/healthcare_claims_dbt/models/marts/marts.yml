@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: mart_claim_priority_queue
+    columns:
+      - name: claim_id
+        tests:
+          - not_null
+
+  - name: mart_claims_overview

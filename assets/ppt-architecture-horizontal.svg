@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 240" width="1280" height="240" role="img" aria-label="Architecture: Synthea CSV to Streamlit">
+  <defs>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#f4faf9;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="accentBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7ad4c8;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#2a8f82;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0a2f36" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0 0, 10 3, 0 6" fill="#40616b"/>
+    </marker>
+  </defs>
+
+  <rect x="40" y="118" width="1200" height="4" rx="2" fill="#c8dbd6" opacity="0.5"/>
+
+  <g filter="url(#shadow)">
+    <rect x="40" y="56" width="168" height="128" rx="14" fill="url(#boxGrad)" stroke="#184b54" stroke-opacity="0.18" stroke-width="1.5"/>
+    <rect x="40" y="56" width="5" height="128" rx="14 0 0 14" fill="url(#accentBar)"/>
+  </g>
+  <text x="124" y="100" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#20384a">Synthea</text>
+  <text x="124" y="122" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#4a6573">CSV extracts</text>
+  <text x="124" y="148" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#607786">claims, txns, context</text>
+
+  <line x1="208" y1="120" x2="248" y2="120" stroke="#40616b" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="248" y="56" width="168" height="128" rx="14" fill="url(#boxGrad)" stroke="#184b54" stroke-opacity="0.18" stroke-width="1.5"/>
+    <rect x="248" y="56" width="5" height="128" rx="14 0 0 14" fill="url(#accentBar)"/>
+  </g>
+  <text x="332" y="100" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#20384a">DuckDB</text>
+  <text x="332" y="122" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#4a6573">Warehouse</text>
+  <text x="332" y="148" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#607786">load, verify, query</text>
+
+  <line x1="416" y1="120" x2="456" y2="120" stroke="#40616b" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="456" y="56" width="200" height="128" rx="14" fill="url(#boxGrad)" stroke="#184b54" stroke-opacity="0.18" stroke-width="1.5"/>
+    <rect x="456" y="56" width="5" height="128" rx="14 0 0 14" fill="url(#accentBar)"/>
+  </g>
+  <text x="556" y="94" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#20384a">dbt</text>
+  <text x="556" y="116" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#4a6573">sources to staging</text>
+  <text x="556" y="134" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#4a6573">intermediate to marts</text>
+  <text x="556" y="158" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#607786">tests, documented SQL</text>
+
+  <line x1="656" y1="120" x2="696" y2="120" stroke="#40616b" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="696" y="56" width="188" height="128" rx="14" fill="url(#boxGrad)" stroke="#184b54" stroke-opacity="0.18" stroke-width="1.5"/>
+    <rect x="696" y="56" width="5" height="128" rx="14 0 0 14" fill="url(#accentBar)"/>
+  </g>
+  <text x="790" y="100" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#20384a">Mart models</text>
+  <text x="790" y="122" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#4a6573">App-ready tables</text>
+  <text x="790" y="148" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#607786">queue, overview</text>
+
+  <line x1="884" y1="120" x2="924" y2="120" stroke="#40616b" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="924" y="56" width="200" height="128" rx="14" fill="url(#boxGrad)" stroke="#184b54" stroke-opacity="0.18" stroke-width="1.5"/>
+    <rect x="924" y="56" width="5" height="128" rx="14 0 0 14" fill="url(#accentBar)"/>
+  </g>
+  <text x="1024" y="100" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#20384a">Streamlit + Plotly</text>
+  <text x="1024" y="122" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#4a6573">Operations UI</text>
+  <text x="1024" y="148" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#607786">monitor, prioritize, drill-down</text>
+
+  <line x1="1124" y1="120" x2="1158" y2="120" stroke="#40616b" stroke-width="2" marker-end="url(#arrowHead)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="1164" y="64" width="96" height="112" rx="14" fill="#184b54"/>
+  </g>
+  <text x="1212" y="118" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Ops /</text>
+  <text x="1212" y="136" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff">Analytics</text>
+
+  <text x="640" y="32" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#40616b" letter-spacing="0.08em">END-TO-END PIPELINE</text>
+</svg>

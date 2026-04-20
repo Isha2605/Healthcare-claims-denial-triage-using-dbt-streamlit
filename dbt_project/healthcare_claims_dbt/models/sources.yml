@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: raw_healthcare
+    schema: main
+    tables:
+      - name: claims
+      - name: claims_transactions
+      - name: patients
+      - name: encounters
+      - name: payers
+      - name: providers
+      - name: organizations
+      - name: procedures
+      - name: conditions
